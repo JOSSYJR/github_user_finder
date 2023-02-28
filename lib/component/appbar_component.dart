@@ -20,7 +20,8 @@ class CustomAppbar extends StatelessWidget {
             )),
         InkWell(
           onTap: (){
-            Get.changeTheme(Get.isDarkMode ? ThemeData.light() : ThemeData.dark());
+            Get.changeThemeMode(Get.isDarkMode ? ThemeMode.light : ThemeMode.dark);
+            //Get.changeTheme(Get.isDarkMode ? ThemeData.light() : ThemeData.dark());
           },
           child: SvgPicture.asset(
               'assets/images/icon-moon.svg',

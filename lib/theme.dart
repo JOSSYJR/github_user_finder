@@ -6,6 +6,7 @@ class AppTheme{
 
   static ThemeData lightTheme() {
     return ThemeData(
+      canvasColor: fullWhite,
       colorScheme: const ColorScheme(
         primary: primary,
         brightness: Brightness.light,
@@ -16,7 +17,7 @@ class AppTheme{
         onError: textColor,
         background: textColor,
         onBackground: secondairyLight,
-        surface: fullWhite,
+        surface: textColor,
         onSurface: textColor,
       ),
     );
@@ -24,6 +25,7 @@ class AppTheme{
 
   static ThemeData darkTheme() {
     return ThemeData(
+      canvasColor: darkBackgroundDark,
       colorScheme: const ColorScheme(
         primary: primary,
         brightness: Brightness.dark,
@@ -34,7 +36,7 @@ class AppTheme{
         onError: textColor,
         background: darkSurface,
         onBackground: darkBackgroundDark,
-        surface: darkbackgroundText,
+        surface: darkSurface,
         onSurface: textColor,
       ),
     );

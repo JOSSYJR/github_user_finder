@@ -38,24 +38,24 @@ class HomePage extends StatelessWidget {
         headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
           return [
             SliverAppBar(
-              backgroundColor: Theme.of(context).colorScheme.onSurface,
+              //backgroundColor: Theme.of(context).colorScheme.onSurface,
               expandedHeight: 130,
               stretch: true,
               title: const CustomAppbar(),
               pinned: true,
               floating: true,
               forceElevated: innerBoxIsScrolled,
-              bottom: const PreferredSize(
-                preferredSize: Size.fromHeight(60),
+              bottom: PreferredSize(
+                preferredSize: const Size.fromHeight(60),
                 child: Padding(
-                  padding: EdgeInsets.symmetric(vertical: 2, horizontal: 15),
+                  padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 15),
                   child: SearchBar(),
                 ),
               ),
             )
           ];
         },
-        body: ResultComponent(),
+        body: SingleChildScrollView(child: ResultComponent()),
       ),
     );
   }

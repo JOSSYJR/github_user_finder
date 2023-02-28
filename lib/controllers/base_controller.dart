@@ -10,7 +10,7 @@ class BaseController extends GetxController {
   RxList<User> users = <User>[].obs;
   final Dio _dio = Dio();
 
-  Future<User> getUser({String username = 'o'}) async {
+  Future<User> getUser({String username = 'octocat'}) async {
     try{
       final response = await _dio.get(path + username);
       if(response.statusCode == 200){
